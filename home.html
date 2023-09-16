@@ -47,21 +47,26 @@
     </style>
 </head>
 <body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-    <header class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4  sticky top-0 z-0">
-        <div id="brand" class="text-white text-2xl font-semibold"><a href="/">E-Cell</a></div>
+    <header>
+        <div id="brand"><a href="/">E-Cell</a></div>
         <nav>
-            <ul class="flex space-x-6 text-white">
-                <li><a href="/home.html">Home</a></li>
-                <li><a href="/grid.html">Grid</a></li>
-                <li><a href="https://www.linkedin.com/in/vivek-chaudhary-455529259" target="_blank">LinkedIn</a></li>
-            </ul>
+          <ul>
+            <li ><a href="./home.html">Home</a></li>
+            <li><a href="./grid.html">grid</a></li>
+            <li><a href="https://www.linkedin.com/in/vivek-chaudhary-455529259">linkedIn</a></li>
+          </ul>
         </nav>
-        <div id="hamburger-icon" onclick="toggleMobileMenu(this)" class="cursor-pointer lg:hidden">
-            <div class="bar1 h-1 w-6 bg-white mb-1"></div>
-            <div class="bar2 h-1 w-6 bg-white mb-1"></div>
-            <div class="bar3 h-1 w-6 bg-white"></div>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+          <div class="bar1" ></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+          <ul class="mobile-menu">
+              <li><a href="./home.html">Home</a></li>
+              <li><a href="./grid.html">grid</a></li>
+              <li><a href="https://www.linkedin.com/in/vivek-chaudhary-455529259">linkedIn</a></li> 
+          </ul>
         </div>
-    </header>
+      </header>
 
 
 
@@ -71,9 +76,7 @@
 
 
     <div class="max-w-md mx-auto bg-white shadow-md rounded-md overflow-hidden">
-      <!-- Card Header -->
-   
-      <!-- Card Body -->
+      
       <div class="px-4 py-4">
           <p class="text-gray-700">
             <section class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-16 text-center text-white">
