@@ -13,126 +13,213 @@
             padding-left: 5%;
             padding-right: 5%;
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Three equal-width columns by default */
-            gap: 20px; /* Spacing between boxes */
-            justify-content: center; /* Center the grid horizontally */
-            align-items: center; /* Center the grid vertically */
-            height: 15vh; /* Make the grid container full height of the viewport */
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px; 
+            justify-content: center;
+            align-items: center; 
+            height: 15vh; 
         }
 
-        /* Style for individual boxes */
+       
         .box1 {
             background-image: linear-gradient(135.38deg, #3300FF 0%, #FA00FF 98.32%);
-; /* Blue background color */
-            color: #fff; /* White text color */
-            padding: 20px; /* Padding inside the boxes */
-            text-align: center; /* Center text horizontally */
+            color: #fff; 
+            padding: 20px; 
+            text-align: center;
             font-size: 18px;
             height: 60vh;
-            border-radius: 5px; /* Rounded corners */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+            border-radius: 5px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .box {
             border-style: solid;
             border-width: medium;
             border-color: #000a06;
-            background-color: #ffffff; /* Blue background color */
-            color: #fff; /* White text color */
-            padding: 20px; /* Padding inside the boxes */
-            text-align: center; /* Center text horizontally */
+            background-color: #ffffff; 
+            color: #fff;
+            padding: 20px; 
+            text-align: center; 
             font-size: 18px;
             height: 60vh;
-            border-radius: 5px; /* Rounded corners */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+            border-radius: 5px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .box3 {
+            border-style: solid;
+            border-width: medium;
+            border-color: #000a06;
+            background-color: #ffffff; 
+            color: #fff;
+            padding: 20px; 
+            text-align: center; 
+            font-size: 18px;
+            height: 60vh;
+            border-radius: 5px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .box4 {
+            border-style: solid;
+            border-width: medium;
+            border-color: #000a06;
+            background-color: #ffffff; 
+            color: #fff;
+            padding: 20px; 
+            text-align: center; 
+            font-size: 18px;
+            height: 60vh;
+            border-radius: 5px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
 
-        /* Media query for medium-width devices */
-        @media screen and (max-width: 768px) {
+        /* Media query for medium-width devices (Tablet) */
+        @media (min-width: 768px) and (max-width: 1030px) {
             .grid-container {
-                grid-template-columns: 1fr; /* One column for medium-width devices */
+                grid-template-columns: repeat(2, 1fr); 
+            }
+            .box1 {
+                grid-column: span 2; 
             }
         }
+
+        /* Media query for small mobile devices */
+        @media screen and (max-width: 768px) {
+            .grid-container{
+                grid-template-columns: repeat(1, 1fr); 
+            }
+         .box1{
+            order:3;
+         }
+         .box4{
+            order:1;
+         }
+         .box3{
+            order:2;
+         }
+    }
+
+
         .grid-container1 {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
-            gap: 8px; /* Spacing between boxes */
-            max-width: 600px; /* Set a max width for the grid */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px; 
+            max-width: 600px; 
             width: 100%;
             max-height: 600px;
             height: 100%;
-            padding: auto; /* Ensure the grid fills the available width */
+            padding: auto; 
         }
 
-        /* Style for individual boxes */
+        
         .box2 {
             background-color: #00407A;
-; /* Blue background color */
-            color: #fff; /* White text color */
-            padding: 20%; /* Padding inside the boxes */
-            text-align: center; /* Center text horizontally */
+            color: #fff; 
+            padding: 20%; 
+            text-shadow: 2px 2px 5px red;
+            text-align: center; 
             font-size: 18px;
-            border-radius: 10px; /* Medium-rounded corners */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
-            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+            border-radius: 10px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer; 
         }
     </style>
     <title>Grid Layout</title>
 </head>
 <body>
-    <header class ="drop-shadow-md">
-        <div id="brand">
-            <a href="/">E-Cell</a>
-        </div>
+    <header>
+        <div id="brand"><a href="/">E-Cell</a></div>
         <nav>
-            <ul>
-                <li><a href="/home.html">Home</a></li>
-                <li><a href="/grid.html">Grid</a></li>
-                <li><a href="/LinkedIn">LinkedIn</a></li>
-            </ul>
+          <ul>
+            <li ><a href="./home.html">Home</a></li>
+            <li><a href="./grid.html">grid</a></li>
+            <li><a href="https://www.linkedin.com/in/vivek-chaudhary-455529259">linkedIn</a></li>
+          </ul>
         </nav>
         <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-            <ul class="mobile-menu">
-                <li><a href="/home.html">Home</a></li>
-                <li><a href="/grid.html">Grid</a></li>
-                <li><a href="/LinkedIn">LinkedIn</a></li>
-            </ul>
+          <div class="bar1" ></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+          <ul class="mobile-menu">
+              <li><a href="./home.html">Home</a></li>
+              <li><a href="./grid.html">grid</a></li>
+              <li><a href="https://www.linkedin.com/in/vivek-chaudhary-455529259">linkedIn</a></li> 
+          </ul>
         </div>
-    </header>
+      </header>
+      <script src="index.js"></script>
 
     <!-- Grid Layout -->
+
     <div class="grid-container">
         <div class="box1"></div>
-        <div class="box p-16">
+        <div class="box3 p-16">
             <img src="https://media.licdn.com/dms/image/C4D0BAQGSZ83BceB4vQ/company-logo_200_200/0/1615316170379?e=2147483647&v=beta&t=m26D4D2oR3OBmRZ7LdYofoRg76vKwViHPunS7c4S2-k"/>
         </div>
-        <div class="box">
+        <div class="box4">
             <div class="grid-container1">
-                <div class="box2" onclick="changeColor(this)"></div>
-                <div class="box2" onclick="changeColor(this)"></div>
-                <div class="box2" onclick="changeColor(this)"></div>
-                <div class="box2" onclick="changeColor(this)"></div>
-                <div class="box2" onclick="changeColor(this)"></div>
-                <div class="box2" onclick="changeColor(this)"></div>
-                <div class="box2" onclick="changeColor(this)"></div>
-                <div class="box2" onclick="changeColor(this)"></div>
-                <div class="box2" onclick="changeColor1()"></div>
+                <div class="box2 " id="1" onclick="changeColor(this)"></div>
+                <div class="box2" id="2" onclick="changeColor(this)"></div>
+                <div class="box2" id="3" onclick="changeColor(this)"></div>
+                <div class="box2" id="4" onclick="changeColor(this)"></div>
+                <div class="box2" id="5" onclick="changeColor(this)"></div>
+                <div class="box2" id="6" onclick="changeColor(this)"></div>
+                <div class="box2" id="7" onclick="changeColor(this)"></div>
+                <div class="box2" id="8" onclick="changeColor(this)"></div>
+                <div class="box2" id="9" onclick="path()"></div>
             </div>
         </div>
     </div>
 
     <script>
-        let selectedBox = null; // To keep track of the selected box
-        // JavaScript function to change box color
+        class Queue {
+    constructor() {
+      this.queue = [];
+    }
+  
+    enqueue(item) {
+      this.queue.push(item);
+    }
+  
+    dequeue() {
+      if (this.isEmpty()) {
+        return null; // Queue is empty
+      }
+      return this.queue.shift();
+    }
+  
+    peek() {
+      return this.isEmpty() ? null : this.queue[0];
+    }
+  
+    isEmpty() {
+      return this.queue.length === 0;
+    }
+  
+    size() {
+      return this.queue.length;
+    }
+  }
+  
+  const myQueue = new Queue();
+  myQueue.enqueue(1);
+  myQueue.enqueue(2);
+  myQueue.enqueue(3);
+  
+  console.log(myQueue.dequeue()); // Output: 1
+  console.log(myQueue.peek());    // Output: 2
+  console.log(myQueue.size());
+        const q1=new Queue();
+        let selectedBox = null; 
         function changeColor(element) {
-                element.style.backgroundColor = " rgba(122, 0, 0, 1)"; // Change the color of the clicked box
-                selectedBox = element; // Update the selected box
+                element.style.backgroundColor = " rgba(122, 0, 0, 1)"; 
+                selectedBox = element; 
+                q1.enqueue(element.id);
             
         }
+        
         function changeColor1(){
             const boxes = document.querySelectorAll(".box2");
 
@@ -142,7 +229,29 @@
                      // Restore original color
                 });
                 
-        };
+        }
+        function path(){
+            let i=0;
+
+
+
+            const intervalId = setInterval(  function (){
+                // while(q1.size()!=0){
+                     console.log("jdbfhdbfhb");
+                     
+                     const z=document.getElementById(q1.peek());
+                     z.style.backgroundColor="#00407A";
+                     q1.dequeue();
+                    if(q1.size()==0)
+                   clearTimeout(intervalId);
+                // }
+                    }, 500);
+
+
+           
+        }
+        
     </script>
+
 </body>
 </html>
